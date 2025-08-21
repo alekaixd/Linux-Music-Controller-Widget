@@ -19,7 +19,7 @@ playerctl:
 
 Clone the directory somewhere in your machine. Make sure that you have ags installed and you have done `ags init`.
 
-Copy the app.tsx, style.css and scripts directory to you ~/.config/ags directory
+Copy the app.tsx, style.css and scripts directory to your ~/.config/ags directory
 
 Run using `ags run`
 
