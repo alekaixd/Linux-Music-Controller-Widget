@@ -2,6 +2,7 @@ import app from "ags/gtk4/app"
 import { createPoll, interval } from "ags/time"
 import Gtk from "gi://Gtk?version=4.0"
 import Gdk from "gi://Gdk?version=4.0"
+import GLib from "gi://GLib?version=2.0"
 import Gtk4LayerShell from "gi://Gtk4LayerShell"
 import { exec, execAsync } from "ags/process"
 import Playerctl from "gi://Playerctl?version=2.0"
@@ -9,13 +10,14 @@ import Playerctl from "gi://Playerctl?version=2.0"
 
 
 function MusicPlayer() {
+	const homeDir = GLib.get_home_dir();
 	const artist = createPoll("", 1000, "playerctl -p spotify metadata xesam:artist");
 	const song = createPoll("", 1000, "playerctl -p spotify metadata xesam:title");
-	const scriptPath = "/home/Alekai/.config/ags/scripts/GetArt.sh";
+	const scriptPath = `${homeDir}/.config/ags/scripts/GetArt.sh`;
 	const artUrl = createPoll("", 1000, scriptPath); // Assuming this outputs the URL; remove if it doesn't.
 
 	const songPos = createPoll("", 500, "playerctl -p spotify position"); // Reduced interval for smoother updates.
-	const songLen = createPoll("", 1000, "/home/Alekai/.config/ags/scripts/GetSongLength.sh");
+	const songLen = createPoll("", 1000, `${homeDir}/.config/ags/scripts/GetSongLength.sh`);
 
 	//   󰏦
 
