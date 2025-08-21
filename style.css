@@ -1,0 +1,59 @@
+* {
+	font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.music-player {
+	background: transparent;
+}
+
+.label-box {
+	padding-left: 7px;
+}
+
+.artist {
+	font-size: 16px;
+	color: #e6e5df;
+	text-shadow: 1px 1px 2px #050408;
+}
+
+.meta-text {
+	font-size: 12px;
+	color: #e6e5df;
+	text-shadow: 1px 1px 2px #050408;
+}
+
+.music-slider {
+	padding: 0px;
+	padding-top: 7px;
+	margin: 0px;
+}
+
+.music-slider trough {
+	background-color: #323036;
+	border-radius: 0px;
+}
+
+.music-slider slider {
+	background-color: transparent;
+	border: transparent;
+	box-shadow: 0 0 0 0;
+}
+
+.music-slider highlight {
+	background-color: #c9abc4;
+	border-radius: 0px;
+}
+
+.mButton {
+	background-color: transparent;
+	font-size: 18px;
+	color: #e6e5df;
+	text-shadow: 1px 1px 2px #050408;
+	padding-right: 2px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+
+.button-holder {
+	padding-left: 7px;
+}
